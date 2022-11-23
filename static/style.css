@@ -1,0 +1,135 @@
+:root {
+  --black-color: #1F1F1F;
+  --white-color: #F8F7F9;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.container {
+  width: 1152px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.nav-bar {
+  display: flex;
+  top: 0;
+  height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.left h3 {
+  font-size: 0.6rem;
+}
+
+.left h1 {
+  font-size: 1.5rem;
+}
+
+.left p {
+  color: gray;
+}
+
+.right img {
+  width: 40rem;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btn {
+  background: none;
+  padding: 0.6rem;
+  border: 2px solid var(--white-color);
+  border-radius: 3px;
+  color: var(--white-color);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn {
+    display: inline-block;
+  }
+  #closenav {
+    display: none;
+  }
+  .menu-btn button {
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1.3rem;
+  }
+  .nav-items {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .social-icons {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: rgb(44, 44, 44);
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    gap: 1.2rem;
+  }
+  .hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+  .hero-section img {
+    display: none;
+  }
+}
